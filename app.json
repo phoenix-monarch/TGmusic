@@ -1,7 +1,7 @@
 {
-    "name": "Alexa Music Bot",
-    "description": "Alexa Is A Telegram Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://telegra.ph/file/798b7275e58d09ac6b095.jpg",
+    "name": "Queen Music Bot",
+    "description": "Queen Is A Telegram Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls.",
+    "logo": "https://telegra.ph/file/88a1f6b6f12de827d2710.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -40,12 +40,12 @@
       },
       "MUSIC_BOT_NAME": {
         "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
-        "value": "乛𝘼𝙇𝙀𝙓𝘼🕊⃝🦋⁪⁬",
+        "value": "ᴍɪꜱꜱ_ᴏᴘ_Qᴜᴇᴇɴ⁪⁬", 
         "required": true
       },
       "OWNER_ID": {
         "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "5303133436",
+        "value": "1624072266",
         "required": true
       },
       "STRING_SESSION": {
@@ -80,7 +80,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/TheTeamAlexa/AlexaMusic",
+        "value": "https://github.com/Dangeeop/Queen-music",
         "required": true
       },
       "UPSTREAM_BRANCH": {
