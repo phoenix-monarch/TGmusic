@@ -82,7 +82,7 @@ async def log_(client, message, _):
         await message.reply_text(_["heroku_2"])
 
 
-@app.on_message(filters.command(GETVAR_COMMAND) & OWNER_ID)
+@app.on_message(filters.command(GETVAR_COMMAND) & (OWNER_ID))
 @language
 async def varget_(client, message, _):
     usage = _["heroku_3"]
@@ -110,7 +110,7 @@ async def varget_(client, message, _):
             return await message.reply_text(f"**{check_var}:** `{str(output)}`")
 
 
-@app.on_message(filters.command(DELVAR_COMMAND) & OWNER_ID)
+@app.on_message(filters.command(DELVAR_COMMAND) & (OWNER_ID))
 @language
 async def vardel_(client, message, _):
     usage = _["heroku_6"]
