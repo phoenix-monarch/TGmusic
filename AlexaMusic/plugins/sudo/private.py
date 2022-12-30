@@ -16,7 +16,7 @@ import config
 from strings import get_command
 from AlexaMusic import app
 from config import OWNER_ID
-from AlexaMusic.misc import SUDOERS
+from AlexaMusic.misc import OWNER_ID
 from AlexaMusic.utils.database import (
     add_private_chat,
     get_private_served_chats,
