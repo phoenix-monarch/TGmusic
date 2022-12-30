@@ -19,13 +19,13 @@ from pyrogram import filters
 import config
 from strings import get_command
 from config import OWNER_ID
-from YukkiMusic import app
-from YukkiMusic.misc import HAPP, SUDOERS, XCB
-from YukkiMusic.utils.database import (get_active_chats,
+from AlexaMusic import app
+from AlexaMusic.misc import HAPP, SUDOERS, XCB
+from AlexaMusic.utils.database import (get_active_chats,
                                        remove_active_chat,
                                        remove_active_video_chat)
-from YukkiMusic.utils.decorators.language import language
-from YukkiMusic.utils.pastebin import Yukkibin
+from AlexaMusic.utils.decorators.language import language
+from AlexaMusic.utils.pastebin import Alexabin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")
@@ -51,7 +51,7 @@ async def log_(client, message, _):
             if HAPP is None:
                 return await message.reply_text(_["heroku_1"])
             data = HAPP.get_log()
-            link = await Yukkibin(data)
+            link = await Alexabin(data)
             return await message.reply_text(link)
         else:
             if os.path.exists(config.LOG_FILE_NAME):
@@ -258,7 +258,7 @@ async def update_(client, message, _):
     _update_response_ = "<b>A new update is available for the Bot!</b>\n\n➣ Pushing Updates Now</code>\n\n**<u>Updates:</u>**\n\n"
     _final_updates_ = _update_response_ + updates
     if len(_final_updates_) > 4096:
-        url = await Yukkibin(updates)
+        url = await Alexabin(updates)
         nrs = await response.edit(
             f"<b>A new update is available for the Bot!</b>\n\n➣ Pushing Updates Now</code>\n\n**<u>Updates:</u>**\n\n[Click Here to checkout Updates]({url})"
         )
