@@ -22,6 +22,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from AlexaMusic import app
+from config import OWNER_ID
 from AlexaMusic.misc import SUDOERS
 
 
@@ -40,7 +41,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 
 @app.on_message(
-    filters.command("eval") & SUDOERS & ~filters.forwarded & ~filters.via_bot
+    filters.command("eval") & filters.user(OWNER_ID) & ~filters.forwarded & ~filters.via_bot
 )
 async def executor(client, message):
     if len(message.command) < 2:
@@ -142,7 +143,7 @@ async def forceclose_command(_, CallbackQuery):
         return
 
 
-@app.on_message(filters.command("sh") & SUDOERS & ~filters.forwarded & ~filters.via_bot)
+@app.on_message(filters.command("sh") & filters.user(OWNER_ID) & ~filters.forwarded & ~filters.via_bot)
 async def shellrunner(client, message):
     if len(message.command) < 2:
         return await edit_or_reply(message, text="**Usage:**\n/sh git pull")
