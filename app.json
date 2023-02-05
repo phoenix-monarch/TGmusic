@@ -80,7 +80,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/Dangeeop/Queen-music",
+        "value": "https://github.com/Dangerop/Queen-music",
         "required": true
       },
       "UPSTREAM_BRANCH": {
